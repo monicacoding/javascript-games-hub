@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variables */
+:root {
+  --first-color: #8075ff;
+  --first-color-light: #a9a5d5;
+  --first-color-alt: #474090;
+  --second-color: hsl(195, 75%, 52%);
+  --dark-color: #262247;
+  --white-color: #e2e8f0;
+  --body-color: hsl(212, 42%, 15%);
+  --container-color: hsl(212, 42%, 20%);
+
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --xo-font-size: 8rem;
+}
+
+/* Base*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--white-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Game */
+
+  .wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+  
+  .container {
+    width: 70vmin;
+    height: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vmin;
+  }
+  
+  .button__option {
+    background: #ffffff;
+    height: 22vmin;
+    width: 22vmin;
+    border: none;
+    border-radius: 40px;
+    font-size: var(--xo-font-size);
+    font-weight: 600;
+    color: var(--first-color);
+    cursor: pointer;
+  }
+
+  .button__new,
+  .button__restart {
+    font-size: var(--normal-font-size);
+    font-weight: 600;
+    background-color: var(--first-color);
+    color: white;
+
+    display: block;
+    position: relative;
+    margin: 2rem auto 0 auto;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1.5rem;
+  }
+
+  .button__new:hover,
+  .button__restart:hover {
+    background-color: var(--first-color-light);
+    cursor: pointer;
+  }
+
+  .button__homepage {
+    display: block;
+    font-size: var(--normal-font-size);
+    font-weight: 600;
+    background-color: var(--white-color);
+    color: var(--dark-color);
+    margin: 1rem auto 0 auto;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1.5rem;
+  }
+
+  .button__homepage:hover {
+    background-color: var(--first-color-light);
+    color: white;
+    cursor: pointer;
+  }
+
+  .popup {
+    background: var(--container-color);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 12vmin;
+  }
+
+  #message {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .popup.hide {
+    display: none;
+  }
