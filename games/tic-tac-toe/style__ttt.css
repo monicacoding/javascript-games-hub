@@ -57,7 +57,7 @@ a {
     height: 22vmin;
     width: 22vmin;
     border: none;
-    border-radius: 40px;
+    border-radius: 60px;
     font-size: var(--xo-font-size);
     font-weight: 600;
     color: var(--first-color);
@@ -127,3 +127,29 @@ a {
   .popup.hide {
     display: none;
   }
+
+/* Breakpoints */
+/* For small devices */
+@media screen and (max-width: 660px) {
+  .button__option {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .button__option {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .button__option {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .button__option {
+    font-size: 3rem;
+  }
+}
