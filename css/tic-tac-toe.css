@@ -1,0 +1,166 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variables */
+:root {
+    --first-color: #8075ff;
+    --first-color-light: #a9a5d5;
+    --first-color-alt: #474090;
+    --white-color: #ffffff;
+    --dark-color: #262247;
+    --light-color: #e2e8f0;
+    --body-color: #162536;
+    --container-color: #1e3248;
+  
+    --main-font: "Poppins", sans-serif;
+    --title-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+  }
+
+/* Resetting CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base*/
+/* Global Styles */
+body {
+    font-family: var(--main-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--first-color-light);
+    color: var(--white-color);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* Game Container */
+  .wrapper {
+    width: 45%;
+    min-width: 500px;
+    background-color: var(--container-color);
+    padding: 40px 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px var(--dark-color);
+  }
+  
+  .container {
+    width: 60vmin;
+    height: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vmin;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem auto;
+  }
+  
+  /* Buttons */
+  .button__option,
+  .button__new,
+  .button__restart,
+  .button__homepage {
+    font-size: var(--normal-font-size);
+    font-weight: 600;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 1rem 2rem;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .button__option {
+    background: var(--white-color);
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 40px;
+    font-size: 4rem;
+    color: var(--first-color);
+  }
+  
+  .button__option:hover {
+    background: var(--light-color);
+  }
+  
+  .button__new,
+  .button__restart {
+    background-color: var(--first-color);
+    color: var(--white-color);
+    margin: 2rem auto 0;
+  }
+  
+  .button__new:hover,
+  .button__restart:hover {
+    background-color: var(--first-color-light);
+  }
+  
+  .button__homepage {
+    background-color: var(--white-color);
+    color: var(--dark-color);
+    margin: 1rem auto 0;
+  }
+  
+  .button__homepage:hover {
+    background-color: var(--first-color-light);
+    color: var(--white-color);
+  }
+  
+  /* Popup */
+  .popup {
+    background: var(--container-color);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 12vmin;
+    z-index: 2;
+  }
+  
+  #message {
+    color: var(--white-color);
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .popup.hide {
+    display: none;
+  }
+  
+  /* Responsive Breakpoints */
+  @media screen and (max-width: 660px) {
+    .button__option {
+      font-size: 6rem;
+    }
+  }
+  
+  @media screen and (max-width: 560px) {
+    .button__option {
+      font-size: 5rem;
+    }
+  }
+  
+  @media screen and (max-width: 460px) {
+    .button__option {
+      font-size: 4rem;
+    }
+  }
+  
+  @media screen and (max-width: 360px) {
+    .button__option {
+      font-size: 3rem;
+    }
+  }
+  

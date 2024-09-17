@@ -1,0 +1,125 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variables */
+:root {
+    --first-color: #8075ff;
+    --first-color-light: #a9a5d5;
+    --first-color-alt: #474090;
+    --white-color: #ffffff;
+    --dark-color: #262247;
+    --light-color: #e2e8f0;
+    --body-color: #162536;
+    --container-color: #1e3248;
+  
+    --main-font: "Poppins", sans-serif;
+    --title-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+  }
+
+/* Resetting CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base*/
+body {
+    height: 100vh;
+    background: var(--first-color-light);
+}
+
+.container {
+    width: 45%;
+    min-width: 500px;
+    background-color: var(--container-color);
+    padding: 40px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px var(--dark-color);
+}
+
+.score {
+    margin-bottom: 50px;
+    margin-right: 20px;
+    text-align: right;
+    font-family: var(--main-font);
+    color: var(--white-color)
+}
+
+.button__options {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button__options button {
+    background-color: var(--white-color);
+    color: var(--first-color);
+    border: none;
+    font-size: 50px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+.button__options i:hover {
+    font-size: 60px;
+}
+
+.details {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.scores,
+.details{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--white-color);
+}
+
+#result {
+    width: 180px;
+    padding: 10px 0;
+    margin: 30px auto;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 40px;
+}
+
+#choice__user,
+#choice__computer {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+span {
+    font-weight: 600;
+}
+
+.button__homepage {
+    display: block;
+    font-size: var(--normal-font-size);
+    font-weight: 600;
+    background-color: var(--white-color);
+    color: var(--dark-color);
+    margin: 1rem auto 0 auto;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1.5rem;
+  }
+
+  .button__homepage:hover {
+    background-color: var(--first-color-light);
+    color: white;
+    cursor: pointer;
+  }

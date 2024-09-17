@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../../css/tic-tac-toe.css">
+
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <!-- Game -->
+   <div class="wrapper">
+       <!-- Grid -->
+       <div class="container">
+           <button class="button__option"></button>
+           <button class="button__option"></button>
+           <button class="button__option"></button>
+           <button class="button__option"></button>
+           <button class="button__option"></button>
+           <button class="button__option"></button>
+           <button class="button__option"></button>
+           <button class="button__option"></button>
+           <button class="button__option"></button>
+       </div>
+
+       <!-- Restart Game -->
+       <button class="button__restart">Restart Game</button>
+
+       <!-- Homepage -->
+       <a href="./main.html">
+            <button class="button__homepage"><i class="fa-solid fa-house"></i></button>
+        </a>
+   </div>
+
+   <!-- Play Again Popup -->
+   <div class="popup hide">
+       <p id="message"></p>
+       <button class="button__new">Play Again</button>
+   </div>
+
+   <!-- Confetti -->
+   <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+   
+   <!-- Script -->
+   <script src="../../js/tic-tac-toe.js"></script>
+</body>
+</html>

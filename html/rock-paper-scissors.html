@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/rock-paper-scissors.css">
+
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Score -->
+        <div class="score">
+            <p>Computer : 
+                <span id="score__computer">0</span>
+            </p>
+            <p>
+                You :
+                <span id="score__user">0</span>
+            </p>
+        </div>
+
+        <!-- Options -->
+        <div class="button__options">
+            <button onclick="checker('rock')">
+                <i class="far fa-hand-rock"></i>
+            </button>
+            <button onclick="checker('paper')">
+                <i class="far fa-hand-paper"></i>
+            </button>
+            <button onclick="checker('scissors')">
+                <i class="far fa-hand-scissors"></i>
+            </button>
+        </div>
+
+        <!-- Details -->
+        <div class="details">
+            <p id="choice__user"></p>
+            <p id="choice__computer"></p>
+            <p id="result"></p>
+        </div>
+        
+        <!-- Homepage -->
+        <div class="homepage">
+            <a href="./main.html">
+                <button class="button__homepage"><i class="fa-solid fa-house"></i></button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script src="../js/rock-paper-scissors.js"></script>
+</body>
+</html>

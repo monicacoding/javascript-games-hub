@@ -1,0 +1,184 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variables */
+:root {
+  --first-color: #8075ff;
+  --first-color-light: #a9a5d5;
+  --first-color-alt: #474090;
+  --white-color: #ffffff;
+  --dark-color: #262247;
+  --light-color: #e2e8f0;
+  --body-color: #162536;
+  --container-color: #1e3248;
+  
+  --main-font: "Poppins", sans-serif;
+  --title-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+}
+
+/* Resetting CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: var(--main-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--first-color-light);
+  color: var(--white-color);
+}
+
+/* Wrapper */
+.wrapper {
+  box-sizing: content-box;
+  width: 26.87em;
+  padding: 2.5em 3em;
+  background-color: var(--container-color);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0 15px 25px var(--dark-color);
+}
+
+/* Game Container */
+.container__game {
+  display: grid;
+  gap: 0.6em;
+  width: 100%;
+  position: relative;
+}
+
+.container__stats {
+  text-align: right;
+  margin-bottom: 1.2em;
+}
+
+.container__stats span {
+  font-weight: 600;
+}
+
+/* Card */
+.container__card {
+  width: 6.25em;
+  height: 6.25em;
+  position: relative;
+  cursor: pointer;
+}
+
+.card__before,
+.card__after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 3px solid var(--light-color);
+  backface-visibility: hidden;
+  transition: transform 0.7s ease-out;
+}
+
+.card__before {
+  background-color: var(--first-color);
+  color: var(--white-color);
+  font-size: 2.8em;
+  font-weight: 600;
+}
+
+.card__after {
+  background-color: var(--white-color);
+  transform: rotateY(180deg);
+}
+
+.container__card.flipped .card__before {
+  transform: rotateY(180deg);
+}
+
+.container__card.flipped .card__after {
+  transform: rotateY(0deg);
+}
+
+/* Controls */
+.container__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--first-color-light);
+  top: 0;
+}
+
+button {
+  border: none;
+  border-radius: 0.3em;
+  padding: 1em 1.5em;
+  cursor: pointer;
+}
+
+/* Specific Buttons */
+#stop, 
+.button__homepage,
+.container__controls button {
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+  border-radius: 1.5rem;
+  padding: 1rem 2rem;
+  display: block;
+  margin: 2rem auto 0;
+  cursor: pointer;
+}
+
+#stop {
+  background-color: var(--first-color);
+  color: var(--white-color);
+}
+
+#stop:hover {
+  background-color: var(--first-color-light);
+}
+
+.button__homepage {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  margin-top: 1rem;
+}
+
+.button__homepage:hover {
+  background-color: var(--first-color-light);
+  color: var(--white-color);
+}
+
+.container__controls button {
+  background-color: var(--first-color);
+  color: var(--white-color);
+}
+
+.container__controls button:hover {
+  background-color: var(--first-color-alt);
+}
+
+/* Result */
+#result {
+  text-align: center;
+}
+
+#result h2 {
+  font-size: 4rem;
+}
+
+/* Utility */
+.hide {
+  display: none;
+}
